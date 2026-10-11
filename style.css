@@ -1,0 +1,53 @@
+/* BG COLOR + TEXT */
+body {
+    background-color: #FFF9F0;
+    color: #54151B;
+}
+
+/* WEBSITE HEADER */
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    color: #AC0023;
+}
+
+/* CAT BREED SEARCH FORM */
+form {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* SEARCH BUTTON */
+button {
+    background-color: #AC0023;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* CAT BREED SEARCH INPUT */
+input {
+    padding: 10px;
+    border: 1px solid #57443D;
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* MOBILE SCREEN ADJUSTMENTS */
+@media (max-width: 600px) {
+    input {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    form {
+        padding: 10px;
+    }
+}
