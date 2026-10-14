@@ -51,3 +51,24 @@ input {
         padding: 10px;
     }
 }
+
+/* MAKE THE IMAGE APPROPRIATELY SIZED */
+#catResults img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 2em 0 0.5em 0;
+}
+
+/* CAT NAME */
+#catResults h2 {
+    text-align: center;
+}
+
+/* OTHER STUFF */
+#catResults p {
+    text-align: center;
+    white-space: pre-line;
+}
