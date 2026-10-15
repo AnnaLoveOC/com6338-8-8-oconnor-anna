@@ -63,7 +63,7 @@ input {
 }
 
 /* CAT NAME */
-#catResults h2 {
+#catResults h2, h3 {
     text-align: center;
 }
 
