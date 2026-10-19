@@ -1,5 +1,5 @@
 // API Key
-const API_KEY = "NOTES APP"
+const API_KEY = "live_YJocNgXJigfoGCukpuGm1N68BMYfav0j2rWhbKhHn3ZvVaWwa1fwgrTB219vs1sc"
 
 // STEP 1: Set up Starting Variables and Select DOM Elements
 const URL = "https://api.thecatapi.com/v1/breeds/search"
@@ -27,14 +27,16 @@ searchForm.onsubmit = async (event) => {
      // stop if nothing was typed
     if (!catBreed) return
 
-    // storing the completed address
-    const searchURL = `${URL}?q=${catBreed}&api_key=${API_KEY}`
 
     // TRY FUNCTION: retrieving the user input and rendering the info
     try {
         // search API for the breed
-        const res = await fetch(searchURL)
-
+            const res = await fetch(`${URL}?q=${catBreed}`, {
+            headers: {
+                "x-api-key": API_KEY
+            }
+        })
+        
         // THROW! If breed isn't found
         if (res.status !== 200) {
             throw new Error("Breed not found")
