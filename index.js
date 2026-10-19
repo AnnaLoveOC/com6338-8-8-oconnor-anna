@@ -1,5 +1,5 @@
 // API Key
-const API_KEY = "OPEN NOTES APP"
+const API_KEY = "NOTES APP"
 
 // STEP 1: Set up Starting Variables and Select DOM Elements
 const URL = "https://api.thecatapi.com/v1/breeds/search"
