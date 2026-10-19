@@ -7,13 +7,19 @@ body {
 /* WEBSITE HEADER */
 header {
     text-align: center;
-    padding: 30px;
+    padding: 30px 30px 15px;
 }
 
 h1 {
     font-family: Georgia, serif;
-    font-size: 40px;
+    font-size: 44px;
     color: #AC0023;
+}
+
+h1 .paw {
+    height: 28px;
+    width: auto;
+    vertical-align: middle;
 }
 
 /* CAT BREED SEARCH FORM */
@@ -29,7 +35,14 @@ button {
     color: white;
     border: none;
     padding: 10px 20px;
+    border-radius: 8px;
     cursor: pointer;
+}
+
+/* BUTTON HOVER EFFECTS */
+button:hover {
+    background-color: #85001B;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 /* CAT BREED SEARCH INPUT */
@@ -38,6 +51,7 @@ input {
     border: 1px solid #57443D;
     background-color: white;
     font-family: Arial, sans-serif;
+    border-radius: 8px;
 }
 
 /* MOBILE SCREEN ADJUSTMENTS */
@@ -50,16 +64,33 @@ input {
     form {
         padding: 10px;
     }
+
+    form label,
+    form input,
+    form button {
+        display: block;
+        margin: 10px auto;
+    }
 }
 
-/* MAKE THE IMAGE APPROPRIATELY SIZED */
+/* HEADING SIZES */
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+
+/* CAT BREED IMAGE */
 #catResults img {
     max-width: 300px;
     width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
-    padding: 2em 0 0.5em 0;
+    margin: 30px auto 10px;    
+    border-radius: 12px;
 }
 
 /* CAT NAME */
@@ -71,4 +102,64 @@ input {
 #catResults p {
     text-align: center;
     white-space: pre-line;
+}
+
+/* CAT BREED RESULT CARD */
+#catResults {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #F5EAE0;
+    border-radius: 16px;
+    text-align: center;
+}
+
+/* HIDE EMPTY CAT RESULTS CARD */
+#catResults:empty {
+    display: none;
+}
+
+/* FAVORITES REMOVE BUTTON */
+#favoriteCats button {
+    background: none;
+    color: #AC0023;
+    font-size: 32px;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+/* REMOVE BUTTON HOVER */
+#favoriteCats button:hover {
+    opacity: 0.6;
+}
+
+/* FAVORITE CAT CARDS */
+#favoriteCats > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5EAE0;
+    border-radius: 16px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    max-width: 500px;
+}
+
+/* FAVORITES SECTION */
+main > section:last-of-type > h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#catResults p {
+    margin: 16px 0;
+}
+
+/* FAVORITE CAT NAME HOVER */
+#favoriteCats h3:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
 }

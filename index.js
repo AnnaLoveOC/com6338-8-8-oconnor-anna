@@ -1,5 +1,5 @@
 // API Key
-const API_KEY = "LOOK IN NOTES APP"
+const API_KEY = "OPEN NOTES APP"
 
 // STEP 1: Set up Starting Variables and Select DOM Elements
 const URL = "https://api.thecatapi.com/v1/breeds/search"
@@ -93,30 +93,43 @@ function renderBreed(breed) {
 
     // origin
     const breedOrigin = document.createElement("p")
-    breedOrigin.textContent = `Origin: ${origin}`
+    const originLabel = document.createElement("strong")
+    originLabel.textContent = "Origin: "
+
+    const originText = document.createElement("span")
+    originText.textContent = origin
+
+    breedOrigin.appendChild(originLabel)
+    breedOrigin.appendChild(originText)
     catResults.appendChild(breedOrigin)
 
     // temperament
     const temperamentLabel = document.createElement("p")
     temperamentLabel.textContent = "Temperament:"
+    temperamentLabel.style.fontWeight = "bold"
+    temperamentLabel.style.marginBottom = "4px"
     catResults.appendChild(temperamentLabel)
 
     const breedTemperament = document.createElement("p")
     breedTemperament.textContent = temperament
+    breedTemperament.style.marginTop = "4px"
     catResults.appendChild(breedTemperament)
 
     // description
     const descriptionLabel = document.createElement("p")
     descriptionLabel.textContent = "Description:"
+    descriptionLabel.style.fontWeight = "bold"
+    descriptionLabel.style.marginBottom = "4px"
     catResults.appendChild(descriptionLabel)
 
     const breedDescription = document.createElement("p")
     breedDescription.textContent = description
+    breedDescription.style.marginTop = "4px"
     catResults.appendChild(breedDescription)
 
     // favorites button
     const favoriteBtn = document.createElement("button")
-    favoriteBtn.textContent = "♡ Add to Favorites"
+    favoriteBtn.textContent = "❤ Add to Favorites"
     catResults.appendChild(favoriteBtn)
 
     // add a cat breed to favorites
@@ -146,6 +159,13 @@ function renderFavorites() {
 
         const favoriteName = document.createElement("h3")
         favoriteName.textContent = breed.name
+
+        favoriteName.style.cursor = "pointer"
+
+        favoriteName.onclick = () => {
+            renderBreed(breed)
+        }
+
         favoriteCard.appendChild(favoriteName)
 
         const removeBtn = document.createElement("button")
